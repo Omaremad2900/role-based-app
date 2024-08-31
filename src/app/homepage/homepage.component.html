@@ -1,0 +1,19 @@
+<div class="container my-5">
+  <h2 class="text-center mb-4 text-primary">Homepage</h2>
+
+  <ul class="list-group">
+    <li *ngFor="let post of filteredPosts" class="list-group-item d-flex justify-content-between align-items-center bg-light border border-secondary mb-3 rounded shadow-lg p-3">
+      <div>
+        <h3 class="mb-2 text-dark">{{ post.title }}</h3>
+        <button class="btn btn-primary text-white" [routerLink]="['/post', post.id]">Read More</button>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<!-- Add custom CSS for gradient background -->
+<style>
+  .bg-gradient {
+    background: linear-gradient(135deg, #e0f7fa, #b9fbc0);
+  }
+</style>

@@ -1,0 +1,22 @@
+<div class="container my-5">
+  <div class="card bg-light text-dark shadow-sm">
+    <div class="card-body">
+      <h2 class="card-title">{{ post.title }}</h2>
+      <p class="card-text">{{ post.body }}</p>
+    </div>
+  </div>
+
+  <hr class="my-4">
+
+  <div class="card mt-4 bg-info text-white">
+    <div class="card-header bg-primary text-white">
+      <h4 class="mb-0">Comments</h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li *ngFor="let comment of comments" class="list-group-item bg-light text-dark">
+        <h5 class="mb-1">{{ comment.name }}</h5>
+        <p class="mb-0">{{ comment.body }}</p>
+      </li>
+    </ul>
+  </div>
+</div>
